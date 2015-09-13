@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">  
+  
+<sqlMap namespace="Coins">  
+	
+ 	<typeAlias alias="UserDO" type="com.dahai.dataobject.UserDO"/>  
+ 	
+ 	<resultMap id="UserDoResult" class="UserDO"> 
+        <result property="id" column="id"/> 
+        <result property="user_id" column="user_id"/> 
+        <result property="coins" column="coins"/> 
+    </resultMap> 
+ 
+ 
+ 	<select id="getByUserId"  parameterClass="UserDO" resultMap="UserDoResult"> 
+        select * from coins where user_id=#user_id# 
+    </select> 
+</sqlMap>  
