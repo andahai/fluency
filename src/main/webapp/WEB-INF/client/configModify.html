@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>北京泛网技术信息公司</title>
+	<link rel="stylesheet" type="text/css" href="client/css/global.css">
+	<link rel="stylesheet" type="text/css" href="client/css/configModify.css">
+	<script type="text/javascript" src="client/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="client/js/sprintf.min.js"></script>
+	<script type="text/javascript" src="client/js/Validation.js"></script>
+	<script type="text/javascript" src="client/js/additional.js"></script>
+	<script type="text/javascript" src="client/js/configModify.js"></script>
+</head>
+<body>
+<div id="header">
+	<img id="pannet" src="client/img/logo/Pannet2.png">
+	<img id="white" src="client/img/logo/white.png">
+	<img id="slogan" src="client/img/logo/slogan.png">
+</div>
+<div id="content">
+	<div id="menu">
+		<ul>
+			<li><a href="gatexstate">查看状态</a></li>
+			<li><a href="gatextraffic">查看流量</a></li>
+			<li><a href="gatexconfig">站点配置</a></li>
+			<li><a href="passwdconfig">修改口令</a></li>
+			<li><a href="logout">退出系统</a></li>
+		</ul>
+	</div>
+	<div class="report">
+		<form  id="config" action="saveStation" method="post">
+			<table id="stationConfig" class="station">
+				<caption>站点配置</caption>
+				<tr>
+					<td>站点名称</td>
+					<td>
+						<input id="0" name="cnname" type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>业务主机IP地址</td>
+					<td>
+						<input id="1" name="hosts" type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>编号</td>
+					<td>
+						<input id="2" name="order" type="text"/>
+					</td>
+				</tr>
+			</table>
+			<table id="interfaceConfig" class="interface">
+				<caption>接口配置</caption>
+				<tr>
+					<th>网络名称</th>
+					<th>接口号</th>
+					<th>IP地址</th>
+					<th>网络掩码</th>
+					<th>网关</th>
+					<th>备注</th>
+				</tr>
+				<tr>
+					<td>本地局域网</td>
+					<td>
+						<input id="3" name="lan1" type="text"/>
+					</td>
+					<td>
+						<input id="4" name="ip1" type="text"/>
+					</td>
+					<td>
+						<input id="5" name="netmask1" type="text">
+					</td>
+					<td>
+						<input id="6" name="gateway1" type="text"/>
+					</td>
+					<td>
+						<textarea id="7" name="comment1"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>主用网</td>
+					<td>
+						<input id="8" name="lan2" type="text"/>
+					</td>
+					<td>
+						<input id="9" name="ip2" type="text"/>
+					</td>
+					<td>
+						<input id="10" name="netmask2" type="text">
+					</td>
+					<td>
+						<input id="11" name="gateway2" type="text"/>
+					</td>
+					<td>
+						<textarea id="12" name="comment2"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>备用网</td>
+					<td>
+						<input id="13" name="lan3" type="text"/>
+					</td>
+					<td>
+						<input id="14" name="ip3" type="text"/>
+					</td>
+					<td>
+						<input id="15" name="netmask3" type="text">
+					</td>
+					<td>
+						<input id="16" name="gateway3" type="text"/>
+					</td>
+					<td>
+						<textarea id="17" name="comment3"></textarea>
+					</td>
+				</tr>
+			</table>
+			<table id="seniorStationConfig" class="station">
+				<caption>高级站点配置</caption>
+				<tbody>
+				</tbody>
+
+
+			</table>
+			<table id="seniorInterfaceConfig" class="interface">
+				<caption>高级接口配置</caption>
+				<thead>
+					<tr>
+						<th>网络名称</th>
+						<th>GRE封装</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+
+			</table>
+			<input type="submit" value="保存"/>
+			<input name="station" type="hidden"/>
+			<input name="proFlag" type="hidden"/>
+		</form>
+		<form id="delete" action="deleteStation" method="post">
+			<input name="station" type="hidden" />
+			<input type="submit" value="删除"/>
+		</form>
+		<form id="stop" action="reverseStation" method="post">
+			<input name="station" type="hidden"/>
+			<input id="stopButton" type="submit" value="停用"/>
+		</form>
+		<input id="seniorConfigButton" type="button" value="高级设置"/>
+	</div>
+</div>
+</body>
+</html>

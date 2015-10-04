@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>北京泛网技术信息公司</title>
+	<link rel="stylesheet" type="text/css" href="client/css/global.css">
+	<link rel="stylesheet" type="text/css" href="client/css/config.css">
+	<script type="text/javascript" src="client/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="client/js/sprintf.min.js"></script>
+	<script type="text/javascript" src="client/js/config.js"></script>
+</head>
+<body>
+<div id="header">
+	<img id="pannet" src="client/img/logo/Pannet2.png">
+	<img id="white" src="client/img/logo/white.png">
+	<img id="slogan" src="client/img/logo/slogan.png">
+</div>
+<div id="content">
+	<div id="menu">
+		<ul>
+			<li><a href="gatexstate">查看状态</a></li>
+			<li><a href="gatextraffic">查看流量</a></li>
+			<li><a href="gatexconfig">站点配置</a></li>
+			<li><a href="passwdconfig">修改口令</a></li>
+			<li><a href="logout">退出系统</a></li>
+		</ul>
+	</div>
+	<div class="report">
+		<table id="config" style="width: 900px">
+			<caption>
+				站点配置
+			</caption>
+			<thead>
+			<tr>
+				<th rowspan='2'>站点名</th>
+				<th colspan='3'>设备接口</th>
+				<th colspan='3'>网络地址</th>
+				<th rowspan='2'>操作</th>
+			</tr>
+			<tr>
+				<th>本地局域网</th>
+				<th>主用网络</th>
+				<th>备用网络</th>
+				<th>网关IP</th>
+				<th>子网掩码</th>
+				<th>切换器IP</th>
+			</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+		<div>
+			<form id="addStation" action="addStation" method="post">
+				<input type="submit"  value="新增站点"/>
+			</form>
+			<input id="globalConfig" type="button" value="全局设置"/>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
