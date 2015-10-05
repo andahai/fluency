@@ -7,7 +7,7 @@ $('document').ready(function(){
 //是否全屏标志
 var screenFlag = 0;
 function init(){
-    var url="/nms/getState";
+    var url="/fluency/getGatexState";
     $.get(url,function(data){
         createTable(data);
     });

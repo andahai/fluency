@@ -11,7 +11,7 @@ public class UserDAOImpl extends SqlMapClientDaoSupport implements UserDAO{
 		// TODO Auto-generated method stub
 		UserDO userDO = null;
 		try {
-			userDO = (UserDO) getSqlMapClientTemplate().queryForObject("getByUserId",user_id);
+			userDO = (UserDO) getSqlMapClientTemplate().queryForObject("Coins.getByUserId",user_id);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

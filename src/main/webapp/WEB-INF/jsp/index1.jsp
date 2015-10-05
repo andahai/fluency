@@ -3,17 +3,17 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>北京泛网技术信息公司</title>
-	<script type="text/javascript" src="client/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="client/js/sprintf.min.js"></script>
-	<script type="text/javascript" src="client/js/stat.js"></script>
-	<link rel="stylesheet" type="text/css" href="client/css/global.css">
-	<link rel="stylesheet" type="text/css" href="client/css/stat.css">
+	<script type="text/javascript" src="static/client/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="static/client/js/sprintf.min.js"></script>
+	<script type="text/javascript" src="static/client/js/stat.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/client/css/global.css">
+	<link rel="stylesheet" type="text/css" href="static/client/css/stat.css">
 </head>
 <body>
 <div id="header">
-	<img id="pannet" src="client/img/logo/Pannet2.png">
-	<img id="white" src="client/img/logo/white.png">
-	<img id="slogan" src="client/img/logo/slogan.png">
+	<img id="pannet" src="static/client/img/logo/Pannet2.png">
+	<img id="white" src="static/client/img/logo/white.png">
+	<img id="slogan" src="static/client/img/logo/slogan.png">
 </div>
 <div id="content">
 	<div id="menu">
