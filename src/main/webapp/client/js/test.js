@@ -21,7 +21,7 @@ function init(){
 }
 //获取接口状态信息
 function getInterfaceState(){
-    var url="/nms/getInterface";
+    var url="/fluency/getInterface";
     $.get(url,function(data){
         var interfaceState = JSON.parse(data);
         var stat= "";
@@ -104,7 +104,7 @@ function createTable(data){
 }
 //轮询状态信息和接口信息
 function ajax_data(){
-    var url="/nms/getState";
+    var url="/fluency/getGatexState";
     $.get(url,function(data)
     {
         var jsonArray = JSON.parse(data);

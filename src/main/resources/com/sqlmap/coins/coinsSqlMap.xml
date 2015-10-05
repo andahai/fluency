@@ -12,7 +12,9 @@
     </resultMap> 
  
  
- 	<select id="getByUserId"  parameterClass="UserDO" resultMap="UserDoResult"> 
+ 	<select id="getByUserId"  resultMap="UserDoResult"> 
         select * from coins where user_id=#user_id# 
     </select> 
+    
+    
 </sqlMap>  

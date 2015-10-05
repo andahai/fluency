@@ -2,6 +2,10 @@ package com.dahai.fluency;
 
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.alibaba.fastjson.JSON;
 import com.dahai.dao.UserDAO;
 import com.dahai.dataobject.UserDO;
 
@@ -35,12 +40,24 @@ public class ApiController {
 		return "index1";
 	}
 	
+	@RequestMapping("/traf")
+	public String traf(){
+		return "index2";
+	}
+	
 	@RequestMapping("/getGatexState")
 	public void ajaxstate(HttpServletResponse response){
-		
+		List<Map<String, String>> list = new ArrayList<Map<String,String>>();
+		Map<String, String>map = new HashMap<String, String>();
+		map.put("city", "北京");
+		map.put("main", "UP");
+		map.put("backup1", "UP");
+		map.put("backup2", "DOWN");
+		map.put("mirror", "DOWN");
+		list.add(map);
 		response.setCharacterEncoding("utf-8");
 		try {
-			response.getWriter().write("[{'city':'站点A1','main':'IDLE','backup1':'IDLE','backup2':'IDLE','mirror':'IDLE'},{'city':'站点A2','main':'IDLE','backup1':'IDLE','backup2':'IDLE','mirror':'IDLE'}]");
+			response.getWriter().write(JSON.toJSONString(list));
 			response.getWriter().flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
